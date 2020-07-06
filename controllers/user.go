@@ -1,15 +1,14 @@
 package controllers
 
 import (
-	"reading-community/models"
 	"encoding/json"
-
-	"github.com/astaxie/beego"
+	"reading-community/models"
 )
 
 // Operations about Users
 type UserController struct {
-	beego.Controller
+	//beego.Controller
+	BaseController
 }
 
 // @Title CreateUser
@@ -116,4 +115,3 @@ func (u *UserController) Logout() {
 	u.Data["json"] = "logout success"
 	u.ServeJSON()
 }
-
